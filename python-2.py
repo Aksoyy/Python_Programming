@@ -36,10 +36,10 @@ Cikti: Guncelleme sonucu =  hakan : 111
 
 def kayit_ekle(result, kisi, numara):
     result[kisi]=numara
-    print("Eklenen kayit : ", list(result.keys())[-1], ":", list(result.values())[-1])
-    
+    print("Eklenen kayit : ", list(result.keys())[-1],\
+     ":", list(result.values())[-1])
+
 # (list(rehber.items())[-1])[0]=kisi ve (list(rehber.items())[-1])[1]=numara
-    
 """
     kayit_ekle(rehber,"hasan",5552223311)
 Cikti: Eklenen kayit :  hasan : 5552223311
