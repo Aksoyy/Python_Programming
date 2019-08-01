@@ -1,3 +1,5 @@
+from functools import wraps
+
 def decorator_with_args(decorator_to_enhance):
     def decorator_maker(*args, **kwargs):
         def decorator_wrapper(func):
@@ -7,18 +9,16 @@ def decorator_with_args(decorator_to_enhance):
 
 
 @decorator_with_args
-def second_decorated_decorator(func, *args, **kwargs): 
+def second_decorated(func, *args, **kwargs): 
+    @wraps(func)
     def wrapper(function_arg1, function_arg2):
-        print('Decorated with', args, kwargs)
+        print('Gelen veri:', args, kwargs)
         return func(function_arg1, function_arg2)
     return wrapper
     
 
-@second_decorated_decorator(1, 2, 3)
+@second_decorated(1, 2, 3,name="Hakan")
 def first_decorated_function(function_arg1, function_arg2):
-    print('Hello', function_arg1, function_arg2)
+    print('Sonraki Veri:', function_arg1, function_arg2)
 
-first_decorated_function('Aksoy', 'Aksoy')
-
-#https://stackoverflow.com/questions
-#/739654/how-to-make-a-chain-of-function-decorators#answer-739665
+first_decorated_function('Hakan', 'Aksoy')

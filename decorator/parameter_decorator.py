@@ -8,7 +8,7 @@ def deco(test="TRUE"):
     return logging_decorator
 
 @deco("test")
-def myfunc1():
+def first():
     pass
 
-myfunc1()
+first()
