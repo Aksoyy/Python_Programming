@@ -2,11 +2,12 @@ import yaml, json
 
 def yaml_to_json(yaml_file):
     
-    #file.yaml file read
+    #file.yaml --> python object
     with open(yaml_file, 'r') as yaml_ :
         yaml_text = yaml.safe_load(yaml_)
+        #print(yaml_text) --> python object
     
-    #file.json file write
+    #file.json file
     json_text = json.dumps(yaml_text)
 
     if 'file.json':
