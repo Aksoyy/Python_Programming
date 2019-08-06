@@ -4,15 +4,15 @@ dict2 = {
     "name":"Hakan",
     "age":22,
     "height":174,
-    #"color":"dark blue",
-    # "hobby":"table tennis",
-    # "number":42
+    "color":"dark blue",
+    "hobby":"table tennis",
+    "number":42
     }
 
 @dataclass
 class InventoryItem:
-    name: str
-    age: int
+    name: str = "test"
+    age: int = 18
     height: int = 0
 
     def name_test(self):
@@ -25,13 +25,24 @@ class InventoryItem:
         elif(self.name!="Hakan"):
             print("Yanlis kelime")
         else: pass
-    
-    
-test = InventoryItem(**dict2)
+
+liste = ["name","age","height"]
+def control2(liste,**dict_key):
+    search_list = dict_key.keys()
+    my_list = {}
+    for item in search_list:
+        if item in liste:
+            # Data append in dictionary
+            my_list[item]=dict_key[item]
+    return my_list
+            
+# control2(liste,**dict2)
+
+test = InventoryItem(**control2(liste,**dict2))
 print(test)
 print(dict2)
-test.name_test()
-test.control()
+# test.name_test()
+# test.control()
 
 # TEST DATACLASS
 # @dataclass
