@@ -33,3 +33,15 @@ print(row.a)  #Prints: 1
 print(row[0]) #Prints: 1
 row = Row._make([2, 3]) #Make a namedtuple from a list of values
 print(row)   #Prints: Row(a=2, b=3)
+
+from typing import NamedTuple
+
+class Nodes(NamedTuple):
+    val: None
+    left: 'Node' = None
+    right: 'Node' = None
+  
+print(Nodes(1)) # Node(val=1, left=None, right=None)
+n = Node(1)
+print(Node(2, left=n))
+# Node(val=2, left=Node(val=1, left=2, right=3), right=3)
