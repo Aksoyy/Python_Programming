@@ -2,14 +2,17 @@ from collections import namedtuple
 
 #DEFAULT PARAMETERS EXAM
 Color = namedtuple('Color', ['r', 'g', 'b', 'a'])
-Color.__new__.__defaults__ = (0.0, 0.0, 0.0, 1.0)
+Color.__new__.__defaults__ = (0.0, None, 0.0, 1.0)
 
+Renk = namedtuple("Color", ["r","g","b","a"], defaults=(None,12,23,45))
+print(Renk())
+print("----------------")
 RED = Color(r=1.0)
 GREEN = Color(g=1.0)
 BLUE = Color(b=1.0)
 BLACK = Color() 
 print(RED,GREEN,BLACK)
-
+print("----------------")
 
 import collections
 
