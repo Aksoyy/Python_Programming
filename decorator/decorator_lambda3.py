@@ -9,11 +9,12 @@ def add_two(x):
 add_two(3)
 
 # Applying decorator to a lambda
-print((base(lambda x: x ** 2))(3))
+base(lambda x: print(x ** 2))(3)
 
 """
 Base
 Sonuc: 8
+
 Base
 (None, 9)
 """
