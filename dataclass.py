@@ -4,9 +4,9 @@ dict2 = {
     "name":"Hakan",
     "age":22,
     "height":174,
-    "color":"dark blue",
-    "hobby":"table tennis",
-    "number":42
+    # "color":"dark blue",
+    # "hobby":"table tennis",
+    # "number":42
     }
 
 @dataclass
@@ -14,17 +14,7 @@ class InventoryItem:
     name: str
     age: int
     height: int = 0
-
-    def __init__(self, **kwargs):
-        self.name = dict2["name"]
-        self.age = dict2["age"]
-        self.height = dict2["height"]
     
-    #def __init__(self, name: str, age: int, height: int=0):
-    #     self.name = name
-    #     self.age = age
-    #     self.height = height
-
 test = InventoryItem(**dict2)
 print(test)
 print(dict2)
