@@ -48,3 +48,5 @@ print(Nodes(1)) # Node(val=1, left=None, right=None)
 n = Node(1)
 print(Node(2, left=n))
 # Node(val=2, left=Node(val=1, left=2, right=3), right=3)
+
+#new dataclass'ta kullanılamazken, namedtuples içinde kullanımı mümkündür

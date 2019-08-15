@@ -2,6 +2,7 @@ from dataclasses import dataclass
 
 dict2 = {
     "name":"Hakan",
+    "lastname":"Aksoy",
     "age":22,
     "height":174,
     "color":"dark blue",
@@ -12,6 +13,7 @@ dict2 = {
 @dataclass
 class InventoryItem:
     name: str = "test"
+    lastname: str = "test2"
     age: int = 18
     height: int = 0
 
@@ -26,8 +28,8 @@ class InventoryItem:
             print("Yanlis kelime")
         else: pass
 
-liste = ["name","age","height"]
-def control2(liste,**dict_key):
+liste = ["name","lastname","age","height"]
+def control2(liste,**dict_key) -> dict:
     search_list = dict_key.keys()
     my_list = {}
     for item in search_list:

@@ -16,5 +16,5 @@ Base
 Sonuc: 8
 
 Base
-(None, 9)
+9
 """
