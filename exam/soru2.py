@@ -23,7 +23,7 @@ class RequestData:
    BASE_URL = 'https://randomuser.me/api/'
 
    def __init__(self, count:str, *args, **kwargs):
-       self.url = self.BASE_URL + '?result={}'.format(count)
+       self.url = self.BASE_URL + '?results={}'.format(count)
   
    @error_handler
    def _make_request(self):
